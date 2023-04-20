@@ -1,7 +1,8 @@
 <aside class="col-md-4">
+    <?php if(is_active_sidebar('sidebar-1')):?>
     <div class="side_blog_bg">
 
-        <div class="news_sletter">
+        <!-- <div class="news_sletter">
             <div class="side_bar_sub_heading">
                 <h6> Newsletter </h6>
             </div>
@@ -18,10 +19,10 @@
                     </div>
             </form>
         
-        </div>
+        </div> -->
     
     
-        <div class="sidebar_wrap">
+        <!-- <div class="sidebar_wrap">
             <div class="side_bar_heading">
                 <h6>Recent POst </h6>
             </div>
@@ -91,9 +92,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     
-       
+        <?php dynamic_sidebar('sidebar-1');?>
+        <!--  
         <div class="sidebar_wrap">
             <div class="side_bar_heading">
                 <h6> Categories </h6>
@@ -110,8 +112,10 @@
                     <li> <a href="#"> <i class="fa fa-folder-open-o" aria-hidden="true"></i> Food & Drink <span> 25 </span> </a> </li>
                 </ul>
             </div>
-        </div>
+        </div> 
+        -->
         
+        <!-- 
         <div class="sidebar_wrap">
             <div class="side_bar_heading">
                 <h6> Explore tags </h6>
@@ -132,6 +136,8 @@
                 </ul>
             </div>
         </div>
+        -->
 
     </div>
+    <?php endif;?>
 </aside>
