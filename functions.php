@@ -348,6 +348,7 @@ function mytheme_widget_categories($args){
 }
 add_filter('widget_categories_args', 'mytheme_widget_categories');
 
+
 class Walker_Categories_Mytheme extends Walker_Category{
 
     /**
@@ -571,3 +572,33 @@ class Walker_Categories_Mytheme extends Walker_Category{
         parent::end_el( $output, $data_object, $depth, $args );
 	}
 }
+
+add_filter('widget_tag_cloud_args', 'mytheme_tag_cloud');
+
+function mytheme_tag_cloud($args, $instance ) {
+
+	$args['smallest'] = 14;
+	$args['largest'] = 14;
+	$args['unit'] = 'px';
+	$args['format']   = 'list';
+
+	// var_dump($instance);
+	return $args;
+}
+
+function kana_wp_tag_cloud_filter($return, $args)
+{
+ return '<div class="tag-detail">'.$return.'</div>';
+}
+
+add_filter('wp_tag_cloud', 'kana_wp_tag_cloud_filter', 10, 2);
+
+// function kana_wp_tag_cloud_filter2($return, $args)
+// {
+// 	var_dump($args);
+	
+//  return $args;
+// }
+
+// add_filter('wp_tag_cloud', 'kana_wp_tag_cloud_filter2', 10, 2);
+

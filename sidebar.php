@@ -115,8 +115,8 @@
         </div> 
         -->
         
-        <!-- 
-        <div class="sidebar_wrap">
+         
+        <!--<div class="sidebar_wrap">
             <div class="side_bar_heading">
                 <h6> Explore tags </h6>
             </div>
@@ -135,8 +135,8 @@
                     <li> <a href="#">  Travel  </a> </li>
                 </ul>
             </div>
-        </div>
-        -->
+        </div>-->
+        
 
     </div>
     <?php endif;?>
