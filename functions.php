@@ -1,9 +1,11 @@
 <?php
 
 require get_template_directory(). '/inc/class-mytheme-widget-recent-posts.php';
+require get_template_directory(). '/inc/class-mytheme-widget-subdcribe.php';
 
 function mytheme_register_widget() {
 	register_widget('Mytheme_Widget_Recent_Posts');
+	register_widget('Mytheme_Widget_Sibscibe');
 }
 
 add_action('widgets_init', 'mytheme_register_widget');
@@ -337,10 +339,10 @@ function mytheme_customize_register( $wp_customize ) {
  */
 function mytheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __('Main Sidebar', 'mytheme' ),
+		'name'          => __('Main Sidebar', 'mytheme'),
 		'id'            => 'sidebar-1',
-		'description'   => __('Widgets in this area will be shown on all posts and pages.', 'mytheme' ),
-		'before_widget' => '<div id="%1$s" class="sidebar_wrap side_bar_heading %2$s">',
+		'description'   => __('Widgets in this area will be shown on all posts and pages.', 'mytheme'),
+		'before_widget' => '<div id="%1$s" class="sidebar_wrap %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="side_bar_heading"><h6>',
 		'after_title'   => '</h6></div>',

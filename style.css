@@ -346,11 +346,11 @@ article.blog_post:last-child {
   text-decoration: none;
 }
 
-.side_bar_heading {
+.side_bar_heading, h6.wp-block-heading {
   text-align: center;
 }
 
-.side_bar_heading h6 {
+.side_bar_heading h6, h6.wp-block-heading {
   border-bottom: 1px solid hsl(0, 0%, 75%);
   display: inline-block;
   font-weight: 300;
@@ -363,7 +363,7 @@ margin-bottom: 40px;
 }
 
 
-.side_bar_heading h6::after {
+.side_bar_heading h6::after, h6.wp-block-heading::after{
   bottom: -34px;
   content: "";
   font-family: fontawesome;
