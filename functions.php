@@ -1,5 +1,14 @@
 <?php
 
+require get_template_directory(). '/inc/class-mytheme-widget-recent-posts.php';
+
+function mytheme_register_widget() {
+	register_widget('Mytheme_Widget_Recent_Posts');
+}
+
+add_action('widgets_init', 'mytheme_register_widget');
+
+
 function mytheme_setup()
 {
     load_theme_textdomain('mytheme');
@@ -14,6 +23,7 @@ function mytheme_setup()
 
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(730, 446);
+	add_image_size('mtheme-resent-post', 80, 80, true);
 
     add_theme_support('html5', array(
         'search-form',
