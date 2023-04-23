@@ -344,7 +344,7 @@ class Mytheme_Widget_Sibscibe extends WP_Widget {
                 </div>
                     
                 <div class="search_btn-3">
-                    <button class="btn btn-default" type="submit">  Subscribe </button>
+                    <button class="btn btn-default" type="submit"><?php esc_html_e('Subscribe', 'mytheme');?> </button>
                 </div>
             </form>
 		<?php

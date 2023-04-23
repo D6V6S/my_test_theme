@@ -1,0 +1,240 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Project-Id-Version: My theme\n"
+"POT-Creation-Date: 2023-04-23 16:08+0300\n"
+"PO-Revision-Date: 2023-04-23 16:09+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: uk_UA\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions.php:86 functions.php:152
+msgid "Home"
+msgstr "Головна"
+
+#: functions.php:139
+msgid "Posted"
+msgstr "Опубліковано"
+
+#: functions.php:141
+msgid "Error 404"
+msgstr "Помилка 404"
+
+#: functions.php:167
+msgid "Previous"
+msgstr "Попередня"
+
+#: functions.php:168
+msgid "Next"
+msgstr "Наступна"
+
+#: functions.php:216
+msgid "previous"
+msgstr "попередня"
+
+#: functions.php:231
+msgid "next"
+msgstr "наступна"
+
+#: functions.php:248
+msgid "Share Your Favorite Mobile Apps With Your Friends"
+msgstr "Поділіться своїми улюбленими мобільними програмами з друзями"
+
+#: functions.php:254
+msgid "URL Fasebook"
+msgstr ""
+
+#: functions.php:259
+msgid "URL twitter"
+msgstr ""
+
+#: functions.php:264
+msgid "URL linkedin"
+msgstr ""
+
+#: functions.php:270
+msgid "Copyrite text"
+msgstr "Авторський текст"
+
+#: functions.php:277
+msgid "Social settings"
+msgstr "Налаштування соціальних мереж"
+
+#: functions.php:282 functions.php:328
+msgid "Footer settings"
+msgstr "Налаштування Футеру"
+
+#: functions.php:290
+msgid "Social header in footer"
+msgstr "Налаштування соціальних мереж"
+
+#: functions.php:300
+msgid "Facebook profile url"
+msgstr ""
+
+#: functions.php:309
+msgid "Twitter profile url"
+msgstr ""
+
+#: functions.php:318
+msgid "Linkedin profile url"
+msgstr ""
+
+#: functions.php:342
+msgid "Main Sidebar"
+msgstr "Головна бічна панель"
+
+#: functions.php:344
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+"Віджети в цій області відображатимуться на всіх публікаціях і сторінках."
+
+#. translators: %s: Category name.
+#: functions.php:484
+#, php-format
+msgid "Feed for all posts filed under %s"
+msgstr ""
+
+#: inc/class-mytheme-widget-recent-posts.php:27
+msgid "Your site&#8217;s most recent Posts."
+msgstr "Останні публікації вашого сайту."
+
+#: inc/class-mytheme-widget-recent-posts.php:31
+msgid "Mytheme Recent Posts"
+msgstr "Mytheme Останні публікації"
+
+#: inc/class-mytheme-widget-recent-posts.php:49
+msgid "Recent Posts"
+msgstr "Останні публікації"
+
+#: inc/class-mytheme-widget-recent-posts.php:114
+msgid "(no title)"
+msgstr "(без назви)"
+
+#: inc/class-mytheme-widget-recent-posts.php:212
+#: inc/class-mytheme-widget-subdcribe.php:502
+#: inc/class-mytheme-widget-subdcribe.php:535
+msgid "Title:"
+msgstr "Назва:"
+
+#: inc/class-mytheme-widget-recent-posts.php:217
+msgid "Number of posts to show:"
+msgstr "Кількість дописів для показу:"
+
+#: inc/class-mytheme-widget-recent-posts.php:223
+msgid "Display post date?"
+msgstr "Показати дату публікації?"
+
+#: inc/class-mytheme-widget-subdcribe.php:35
+msgid "Subscribe form."
+msgstr "Форма підписки."
+
+#: inc/class-mytheme-widget-subdcribe.php:44
+msgid "Subscribe form"
+msgstr "Форма підписки"
+
+#: inc/class-mytheme-widget-subdcribe.php:347
+msgid "Subscribe"
+msgstr "Підписатися"
+
+#: inc/class-mytheme-widget-subdcribe.php:507
+msgid ""
+"This widget may contain code that may work better in the &#8220;Custom "
+"HTML&#8221; widget. How about trying that widget instead?"
+msgstr ""
+
+#: inc/class-mytheme-widget-subdcribe.php:509
+msgid ""
+"This widget may have contained code that may work better in the &#8220;"
+"Custom HTML&#8221; widget. If you have not yet, how about trying that widget "
+"instead?"
+msgstr ""
+
+#. translators: Hidden accessibility text.
+#: inc/class-mytheme-widget-subdcribe.php:513
+#: inc/class-mytheme-widget-subdcribe.php:574
+msgid "Content:"
+msgstr "Зміст:"
+
+#: inc/class-mytheme-widget-subdcribe.php:517
+msgid "Automatically add paragraphs"
+msgstr "Автоматично додавати абзаци"
+
+#: inc/class-mytheme-widget-subdcribe.php:542
+msgid "New Custom HTML Widget"
+msgstr ""
+
+#: inc/class-mytheme-widget-subdcribe.php:544
+msgid ""
+"Did you know there is a &#8220;Custom HTML&#8221; widget now? You can find "
+"it by pressing the &#8220;<a class=\"add-widget\" href=\"#\">Add a Widget</"
+"a>&#8221; button and searching for &#8220;HTML&#8221;. Check it out to add "
+"some custom code to your site!"
+msgstr ""
+
+#: inc/class-mytheme-widget-subdcribe.php:546
+msgid ""
+"Did you know there is a &#8220;Custom HTML&#8221; widget now? You can find "
+"it by scanning the list of available widgets on this screen. Check it out to "
+"add some custom code to your site!"
+msgstr ""
+
+#: inc/class-mytheme-widget-subdcribe.php:549
+#: inc/class-mytheme-widget-subdcribe.php:564
+msgid "Dismiss"
+msgstr ""
+
+#: inc/class-mytheme-widget-subdcribe.php:561
+msgid "Did you just paste HTML?"
+msgstr ""
+
+#: inc/class-mytheme-widget-subdcribe.php:562
+msgid ""
+"Hey there, looks like you just pasted HTML into the &#8220;Visual&#8221; tab "
+"of the Text widget. You may want to paste your code into the &#8220;"
+"Text&#8221; tab instead. Alternately, try out the new &#8220;Custom "
+"HTML&#8221; widget!"
+msgstr ""
+
+#: index.php:25
+msgid "Post By :"
+msgstr "Опубліковано:"
+
+#: index.php:27
+msgid "On :"
+msgstr ""
+
+#: index.php:37
+msgid "Continue reading"
+msgstr "Продовжити читання"
+
+#. Theme Name of the plugin/theme
+msgid "My theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://DVS-DS.PP.UA/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "My first theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DVS"
+msgstr ""

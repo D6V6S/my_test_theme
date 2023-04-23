@@ -13,7 +13,7 @@ add_action('widgets_init', 'mytheme_register_widget');
 
 function mytheme_setup()
 {
-    load_theme_textdomain('mytheme');
+	load_theme_textdomain('mytheme', get_template_directory() . '/lang');
 
     add_theme_support('title-tag');
 
@@ -83,7 +83,7 @@ add_filter('excerpt_more', function ($more) {
 function wptuts_the_breadcrumb(){
 	global $post;
 	if(!is_home()){
-	   echo '<li> <a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li> <li> / </li> ';
+	   echo '<li> <a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'mytheme') .'</a></li> <li> / </li> ';
 		if(is_single()) { // posts
 		the_category(', ');
 		echo " <li> / </li> ";
@@ -136,9 +136,9 @@ function wptuts_the_breadcrumb(){
 		elseif (is_author()) { // authors
 			global $author;
 			$userdata = get_userdata($author);
-			echo '<li>Posted ' . $userdata->display_name . '</li>';
+			echo '<li>'. esc_html__('Posted', 'mytheme') . $userdata->display_name . '</li>';
 		} elseif (is_404()) { // if page not found
-			echo '<li>Error 404</li>';
+			echo '<li>'. esc_html__('Error 404', 'mytheme') .'</li>';
 		}
 	 
 		if (get_query_var('paged')) // number of page
@@ -147,9 +147,9 @@ function wptuts_the_breadcrumb(){
 	} else { // home
 	   $pageNum=(get_query_var('paged')) ? get_query_var('paged') : 1;
 	   if($pageNum>1)
-	      echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li> <li> / </li> <li> '.$pageNum.'- page</li>';
+	      echo '<li><a href="'.site_url().'"><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'mytheme') .'</a></li> <li> / </li> <li> '.$pageNum.'- page</li>';
 	   else
-	      echo '<li><i class="fa fa-home" aria-hidden="true"></i>Home</li>';
+	      echo '<li><i class="fa fa-home" aria-hidden="true"></i>'. esc_html__('Home', 'mytheme') .'</li>';
 	}
 }
 
@@ -164,8 +164,8 @@ function mytheme_pagination( $args = array() ) {
     $defaults = array(
         'range'           => 4,
         'custom_query'    => FALSE,
-        'previous_string' => __( 'Previous', 'text-domain' ),
-        'next_string'     => __( 'Next', 'text-domain' ),
+        'previous_string' => esc_html__( 'Previous', 'mytheme' ),
+        'next_string'     => esc_html__( 'Next', 'mytheme' ),
         'before_output'   => '<div class="next_page"><ul class="page-numbers">',
         'after_output'    => '</ul></div>'
     );
@@ -210,10 +210,10 @@ function mytheme_pagination( $args = array() ) {
     
     // $firstpage = esc_attr( get_pagenum_link(1) );
     // if ( $firstpage && (1 != $page) )
-    //     $echo .= '<li class="previous"><a href="' . $firstpage . '" class="page-numbers">' . __( 'First', 'text-domain' ) . '</a></li>';
+    //     $echo .= '<li class="previous"><a href="' . $firstpage . '" class="page-numbers">' . __( 'First', 'mytheme' ) . '</a></li>';
 
     if ( $previous && (1 != $page) )
-        $echo .= '<li><a href="' . $previous . '" class="page-numbers" title="' . __( 'previous', 'text-domain') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $previous . '" class="page-numbers" title="' . esc_html__( 'previous', 'mytheme') . '">' . $args['previous_string'] . '</a></li>';
     
     if ( !empty($min) && !empty($max) ) {
         for( $i = $min; $i <= $max; $i++ ) {
@@ -228,11 +228,11 @@ function mytheme_pagination( $args = array() ) {
     $next = intval($page) + 1;
     $next = esc_attr( get_pagenum_link($next) );
     if ($next && ($count != $page) )
-        $echo .= '<li><a href="' . $next . '" class="page-numbers" title="' . __( 'next', 'text-domain') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li><a href="' . $next . '" class="page-numbers" title="' . esc_html__( 'next', 'mytheme') . '">' . $args['next_string'] . '</a></li>';
     
     // $lastpage = esc_attr( get_pagenum_link($count) );
     // if ( $lastpage ) {
-    //     $echo .= '<li class="next"><a href="' . $lastpage . '" class="page-numbers" >' . __( 'Last', 'text-domain' ) . '</a></li>';
+    //     $echo .= '<li class="next"><a href="' . $lastpage . '" class="page-numbers" >' . esc_html__( 'Last', 'mytheme' ) . '</a></li>';
     // }
 
     if ( isset($echo) )
@@ -245,7 +245,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     //Header settings
     $wp_customize->add_setting('header_social', array(
-        'default'   => __('Share Your Favorite Mobile Apps With Your Friends', 'mytheme'),
+        'default'   => esc_html__('Share Your Favorite Mobile Apps With Your Friends', 'mytheme'),
         'transport' => 'refresh',
     ));
 
@@ -339,9 +339,9 @@ function mytheme_customize_register( $wp_customize ) {
  */
 function mytheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __('Main Sidebar', 'mytheme'),
+		'name'          => esc_html__('Main Sidebar', 'mytheme'),
 		'id'            => 'sidebar-1',
-		'description'   => __('Widgets in this area will be shown on all posts and pages.', 'mytheme'),
+		'description'   => esc_html__('Widgets in this area will be shown on all posts and pages.', 'mytheme'),
 		'before_widget' => '<div id="%1$s" class="sidebar_wrap %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="side_bar_heading"><h6>',
@@ -481,7 +481,7 @@ class Walker_Categories_Mytheme extends Walker_Category{
 
 			if ( empty( $args['feed'] ) ) {
 				/* translators: %s: Category name. */
-				$alt = ' alt="' . sprintf( __( 'Feed for all posts filed under %s' ), $cat_name ) . '"';
+				$alt = ' alt="' . sprintf( esc_html__( 'Feed for all posts filed under %s' ), $cat_name ) . '"';
 			} else {
 				$alt   = ' alt="' . $args['feed'] . '"';
 				$name  = $args['feed'];

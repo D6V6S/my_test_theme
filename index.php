@@ -22,9 +22,9 @@
 								<div class="blog_text">
 									<ul>
 										<li> | </li>
-										<li> Post By : <?php the_author_posts_link()?> </li>
+										<li> <?php esc_html_e('Post By :', 'mytheme');?> <?php the_author_posts_link()?> </li>
 										<li> | </li>
-										<li> On : <?php the_time('j F Y')?> </li>
+										<li> <?php esc_html_e('On :', 'mytheme');?> <?php the_time('j F Y')?> </li>
 									</ul>
 								</div>
 
@@ -34,7 +34,7 @@
 
 								<?php the_excerpt()?>
 								
-								<a href="<?php the_permalink(); ?>"> Continue reading
+								<a href="<?php the_permalink(); ?>"> <?php esc_html_e('Continue reading', 'mytheme');?>
 									<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
 							</article>
