@@ -128,8 +128,8 @@ class Mytheme_Widget_Recent_Posts extends WP_Widget {
                 
                 <div class="recent-text">
                     <!-- <h6> -->
-                        <a href="<?php the_permalink( $recent_post->ID ); ?>">
-                            <?php echo $aria_current; ?>><?php echo $title; ?>
+                        <a href="<?php the_permalink( $recent_post->ID ); ?>" <?php echo $aria_current; ?>>
+                             <?php echo $title; ?>
                         </a>
                     <!-- </h6> -->
                     

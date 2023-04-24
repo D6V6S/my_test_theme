@@ -43,6 +43,8 @@ if ( post_password_required() ) {
 				'style'       => 'ol',
 				'short_ping'  => true,
 				'avatar_size' => 74,
+				'callback' => 'mytheme_list_comment',
+				'max_depth' => 2,
 			) );
 			?>
 		</ol><!-- .comment-list -->

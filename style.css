@@ -2290,4 +2290,46 @@ article {  margin: 0 0 70px;}
 
 }
 
+/* Comment lis style */
+.comment-list,
+.children {
+  list-style: none;
+}
+
+.comment-list .comment{
+  margin-top: 20px;
+}
+
+.comment-wrap-info{
+  overflow: hidden;
+}
+
+.comment-author, 
+.comment-meta {
+  float: left;
+}
+
+.comment-meta .autor-name{
+  font-family: 'Roboto Slab', serif;
+}
+
+.comment-meta .comment-date,
+.comment-reply-link{
+  font-size: 11px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+.comment-meta .comment-date:hover,
+.comment-reply-link:hover,
+.comment-awaiting-moderation{
+  color: #f6b20e;
+}
+.comment-author{
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
 
