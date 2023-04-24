@@ -85,7 +85,7 @@ if ( post_password_required() ) {
 
             ),
 			'comment_field'	=> '<div class="form-group comment-form-comment">
-								<label for="comment">' . esc_html_x( 'Comment :', 'mytheme' ) . '</label>
+								<label for="comment">' . esc_html_x('Comment :', 'mytheme' ) . '</label>
 								<textarea id="comment" class="form-textarea" name="comment" rows="3" aria-required="true" required="required"></textarea>
 								</div>',
             // Change the title of send button
