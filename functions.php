@@ -614,3 +614,18 @@ add_filter('wp_tag_cloud', 'kana_wp_tag_cloud_filter', 10, 2);
 
 // add_filter('wp_tag_cloud', 'kana_wp_tag_cloud_filter2', 10, 2);
 
+add_filter('comment_from_fields', 'qoob_reorder_comment_fields') ;
+function qoob_reorder_comment_fields($fields)
+{
+	$new_fields = array();
+	$myorder = array('autor','email','comment');
+	foreach ($myorder as $key) {
+		$new_fields[$key] = $fields[$key];
+		unset($fields[$key]);
+	}
+	if ($fields) {
+		foreach ($fields as $key => $val)
+		$new_fields[$key] = $val;
+	}
+	return $new_fields;
+}
