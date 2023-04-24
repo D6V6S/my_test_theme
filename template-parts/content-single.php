@@ -1,4 +1,4 @@
-<article <?php post_class('blog_post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog_post'); ?>>
     <h4> <?php the_title(); ?></h4>
     <div class="blog_category">
         <ul>
